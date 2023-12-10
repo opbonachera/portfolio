@@ -1,4 +1,4 @@
-import CardComponent from "./CardComponent";
+import Image from "next/image"
 
 export default function Projects(){
     return(
@@ -9,7 +9,7 @@ export default function Projects(){
                 <div className="carousel-inner">
                     <div className="carousel-item active d-flex align-items-center justify-content-center" style={{ width: '100%'}}>
                         <div className="card">
-                            <img className="card-img-top" src="https://img.freepik.com/free-photo/leaf-nature-backgrounds-pattern-illustration-plant-backdrop-design-abstract-vibrant-green-nature-wallpaper-illustration-generative-ai_188544-12680.jpg?w=1380&t=st=1702149738~exp=1702150338~hmac=d093de1f04d43ca60786e8fb4ed7e9f6f981025078f949031c6eb0d93dc0fc93" alt="Card image cap" />
+                            <Image alt="card-img" src={"https://img.freepik.com/free-photo/leaf-nature-backgrounds-pattern-illustration-plant-backdrop-design-abstract-vibrant-green-nature-wallpaper-illustration-generative-ai_188544-12680.jpg?w=1380&t=st=1702149738~exp=1702150338~hmac=d093de1f04d43ca60786e8fb4ed7e9f6f981025078f949031c6eb0d93dc0fc93"}/>
                             <div className="card-body">
                                 <h5 className="card-title">To-Do App</h5>
                                 <p className="card-text">To-Do App built on Next.js and React.js</p>
@@ -27,8 +27,8 @@ export default function Projects(){
                     </div>
                     <div className="carousel-item">
                         <div className="card">
-                            <img className="card-img-top" src="https://img.freepik.com/free-photo/leaf-nature-backgrounds-pattern-illustration-plant-backdrop-design-abstract-vibrant-green-nature-wallpaper-illustration-generative-ai_188544-12680.jpg?w=1380&t=st=1702149738~exp=1702150338~hmac=d093de1f04d43ca60786e8fb4ed7e9f6f981025078f949031c6eb0d93dc0fc93" alt="Card image cap" />
-                            <div className="card-body">
+                        <Image alt="card-img" src={"https://img.freepik.com/free-photo/leaf-nature-backgrounds-pattern-illustration-plant-backdrop-design-abstract-vibrant-green-nature-wallpaper-illustration-generative-ai_188544-12680.jpg?w=1380&t=st=1702149738~exp=1702150338~hmac=d093de1f04d43ca60786e8fb4ed7e9f6f981025078f949031c6eb0d93dc0fc93"}/>
+                        <div className="card-body">
                                 <h5 className="card-title">Card title</h5>
                                 <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
@@ -38,7 +38,7 @@ export default function Projects(){
                     </div>
                     <div className="carousel-item">
                         <div className="card">
-                            <img className="card-img-top" src="https://img.freepik.com/free-photo/leaf-nature-backgrounds-pattern-illustration-plant-backdrop-design-abstract-vibrant-green-nature-wallpaper-illustration-generative-ai_188544-12680.jpg?w=1380&t=st=1702149738~exp=1702150338~hmac=d093de1f04d43ca60786e8fb4ed7e9f6f981025078f949031c6eb0d93dc0fc93" alt="Card image cap" />
+                        <Image alt="card-img" src={"https://img.freepik.com/free-photo/leaf-nature-backgrounds-pattern-illustration-plant-backdrop-design-abstract-vibrant-green-nature-wallpaper-illustration-generative-ai_188544-12680.jpg?w=1380&t=st=1702149738~exp=1702150338~hmac=d093de1f04d43ca60786e8fb4ed7e9f6f981025078f949031c6eb0d93dc0fc93"}/>
                             <div className="card-body">
                                 <h5 className="card-title">Card title</h5>
                                 <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
