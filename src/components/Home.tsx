@@ -14,7 +14,7 @@ export default function Main() {
                 </div> */}
                 <div className="col-12 d-flex flex-column align-items-center justify-content-center">
                         <p className="display-1 font-alice">Ornella Bonachera</p>
-                        <p className="fs-5">Estudiante de ingenieria en informática y desarrolladora fullstack.</p>
+                        <p className="fs-5">Informatics Engineering student and frontend web developer.</p>
                         
                         <button className="btn btn-outline-dark mt-3 font-cursive">
                             <Link className="nav-link" to='#projects' spy={true} smooth={true} duration={300}>Projects</Link>

@@ -7,7 +7,8 @@ import Projects from '@/components/Projects'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
-
+import { ProjectCard
+ } from '@/components/ProjectCard'
 export default function Home() {
   return (
     <>
@@ -15,8 +16,9 @@ export default function Home() {
       <Main />
       <About />
       <Projects />
+      
       <Contact />
-      {/* // <Footer /> */}
+      
     </> 
   )
 }
