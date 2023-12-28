@@ -1,0 +1,20 @@
+[{
+    "about": "Sobre mi",
+    "projects":"Proyectos",
+    "contact":"Contacto",
+    "title":"DESARROLLADORA WEB JUNIOR Y ESTUDIANTE DE INGENIERIA EN INFORMATICA",
+    "button":"Ver Proyectos",
+    "about-me":"Sobre mi",
+    "about-me-text":"Mi viaje en el mundo de la programación comenzó en mis últimos años de secundaria, cuando descubrí mi pasión por la tecnología y las mejoras que puede realizar en la vida de las personas. Desde entonces me dediqué a aprender sobre el tema a partir de la lectura de libros, realización de cursos y pequeños proyectos. Gracias a mi constancia y dedicación comencé a trabajar como desarrolladora web junior ni bien terminé mis estudios secundarios, puesto en el cual me desempeño desde hace aproximadamente 10 meses.",
+    "experience-title":"Experiencia",
+    "uni-experience":"Universidad Nacional de Avellaneda • Junior Web Developer",
+    "uni-date":"Marzo 2023 - Presente",
+    "uni-text":"Contribuyo activamente al desarrollo, refactorización y optimización de los sistemas de la universidad en colaboración con un equipo de programadores dedicado. Aunque me especializo en tareas frontend, también asumo algunas responsabilidades de backend. Actualmente, participo en la refactorización de un administrador de contenido utilizando React.js y Next.js para el frontend, Python para el desarrollo del backend y PostgreSQL para la base de datos.",
+    "free":"Freelance • Support assistant and wordpress developer | Marzo 2022 – Diciembre 2022",
+    "free-text":"Dirigí con éxito sesiones de capacitación para empleados en una tienda de deportes, instruyéndolos en la administración y operación de su tienda en línea construida en WordPress. Además, participé activamente en el desarrollo de la tienda, especializándome en la implementación de varios plugins y mejorando el diseño general.",
+    "my-projects":"My Projects",
+    "projects-text":"Welcome to my project showcase, where I highlight some of the exciting coding ventures I've undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I've crafted, showcasing my skills and passion for coding.",
+    "contact-title":"Contacto",
+    "world-explorer-title":"Explorador del Mundo",
+    "world-explorer-text":"Buscador de información de países. Trabaja realizando peticiones HTTP a la API RESTCountries"
+}]

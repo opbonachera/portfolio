@@ -1,0 +1,20 @@
+[{
+    "about": "About me",
+    "projects":"Projects",
+    "contact":"Contact",
+    "title":"JUNIOR WEB DEVELOPER AND INFORMATICS ENGINEERING STUDENT",
+    "button":"See Projects",
+    "about-me":"About me",
+    "about-me-text":"My journey into the world of programming began in my final years of high school when I discovered my passion for technology and the positive impact it can have on people's lives. Since then, I have dedicated myself to learning about the subject through reading books, taking courses, and working on small projects. Thanks to my perseverance and dedication, I started working as a junior web developer right after completing my high school studies, a position I have been in for approximately 10 months.",
+    "experience-title":"Experience",
+    "uni-experience":"National University of Avellaneda • Junior Web Developer",
+    "uni-date":"March 2023 - Present",
+    "uni-text":"I actively contribute to the development, refactoring, and optimization of the university's systems in collaboration with a dedicated team of programmers. While specializing in frontend tasks, I also take on some backend responsibilities. Currently, I am involved in the refactoring of a content management system using React.js and Next.js for the frontend, Python for backend development, and PostgreSQL for the database.",
+    "free":"Freelance • Support Assistant and WordPress Developer March 2022 – December 2022",
+    "free-text":"I successfully led training sessions for employees at a sports store, instructing them in the management and operation of their online store built with WordPress. Additionally, I actively participated in the development of the store, specializing in the implementation of various plugins and enhancing the overall design.",
+    "my-projects":"My Projects",
+    "projects-text":"Welcome to my project showcase, where I highlight some of the exciting coding ventures I've undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I've crafted, showcasing my skills and passion for coding.",
+    "contact-title":"Contacto",
+    "world-explorer-title":"World Explorer",
+    "world-explorer-text":"Country Information Searcher. It works by making HTTP requests to the RESTCountries API."
+}]

@@ -2,13 +2,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
 
 import type { Metadata } from "next";
-
-import { Alice, Bitter, Inter } from 'next/font/google';
+import { appWithTranslation } from 'next-i18next';
+import { Alice, Bitter, Inter, Roboto } from 'next/font/google';
 import Script from "next/script";
 
 const bitter = Bitter({ subsets: ["latin"], variable:'--font-bitter' });
 const inter = Inter({ subsets: ["latin"], variable:'--font-inter'});
 const alice = Alice({ subsets:["latin"], variable:'--font-alice', weight:'400'});
+const roboto = Roboto({ subsets:["latin"], variable:'--font-roboto', weight:'400'});
 
 export const metadata: Metadata = {
   title: "Ornella Bonachera | Portfolio",
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning={true} lang="en">
 
-      <body className={`${bitter.variable} ${inter.variable} ${alice.variable}`}>{children}</body>
+      <body className={`${bitter.variable} ${inter.variable} ${alice.variable} ${roboto.variable}`}>{children}</body>
    
       <Script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

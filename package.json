@@ -15,9 +15,12 @@
     "bootstrap": "^5.3.2",
     "fontawesome": "^5.6.3",
     "next": "14.0.4",
+    "next-i18next": "^15.1.1",
+    "next-intl": "^3.4.0",
     "react": "^18",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18",
+    "react-i18next": "^14.0.0",
     "react-router-hash-link": "^2.4.3",
     "react-scroll": "^1.9.0"
   },

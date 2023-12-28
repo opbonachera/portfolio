@@ -1,3 +1,6 @@
+body{
+  background-color: rgba(243, 243, 243, 0.693);
+}
 .font-cursive{
     font-family: var(--font-bitter);
 }
@@ -10,29 +13,21 @@
     font-family: var(--font-inter);
 }
 
-.bg-home{
-    background-color: rgb(255, 241, 241);
+.font-roboto{
+  font-family: var(--font-roboto);
 }
 
-.bg-home-lighter{
-    background-color: rgb(255, 241, 241);
-}
-
-.bg-home-lightest{
-    background-color: rgb(255, 243, 243);
-}
-
-a {
+.link {
     position: relative;
-    color: #ffdfdf;
+    color: #4a4a4a;
     text-decoration: none;
   }
   
-  a:hover {
-    color: #ffdfdf;
+.link:hover {
+    color: #443c3c;
   }
   
-  a::before {
+.link::before {
     content: "";
     position: absolute;
     display: block;
@@ -40,11 +35,35 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffdfdf;
+    background-color: #a22323;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
   
-  a:hover::before {
+.link:hover::before {
     transform: scaleX(1);
   }
+
+#navbar-item{
+  text-decoration: none;
+  color: black;
+}
+
+#img{
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+#contact-anchor{
+  text-decoration: none;
+  margin: 2rem;
+}
+
+#home-title{
+  font-weight: 600;
+  font-size: 2.7rem;
+  font-family: var(--font-inter);
+}
