@@ -1,17 +1,8 @@
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 export default function Contact(){
     return(
         <>
             <div className="d-flex flex-column align-items-center justify-content-center" id="#contact">
-                {/* <h1 classNameName="font-roboto pt-4 mb-5">Contacto</h1>
-                
-                <div>
-                    <a id="contact-anchor" href="https://www.linkedin.com/in/obonachera/" classNameName="text-dark" target="_blank">LINKEDIN </a> |
-                    <a id="contact-anchor" href="mailto:obonachera@gmail.com" classNameName="text-dark" target="_blank"> EMAIL </a> |
-                    <a id="contact-anchor" href="https://github.com/opbonachera" classNameName="text-dark" target="_blank"> GITHUB </a> | 
-                    <a id="contact-anchor" href="" classNameName="text-dark" target="_blank"> CV </a>
-                </div> */}
 
                 <div className="card">
                 <div className="card-body">

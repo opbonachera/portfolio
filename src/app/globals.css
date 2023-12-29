@@ -1,20 +1,14 @@
 body{
   background-color: rgba(243, 243, 243, 0.693);
-}
-.font-cursive{
-    font-family: var(--font-bitter);
+  font-family: var(--font-inter);
 }
 
-.font-alice{
-    font-family: var(--font-alice);
+*{
+  font-family:var(--font-inter)
 }
 
 .font-inter{
     font-family: var(--font-inter);
-}
-
-.font-roboto{
-  font-family: var(--font-roboto);
 }
 
 .link {
@@ -24,7 +18,7 @@ body{
   }
   
 .link:hover {
-    color: #443c3c;
+    color: #000000;
   }
   
 .link::before {
@@ -35,7 +29,7 @@ body{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #a22323;
+    background-color: #000000;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -57,13 +51,56 @@ body{
   margin-top: 1rem;
 }
 
+#img:hover{
+  width: 65%;
+  transition: 2s ease-out;
+}
+
 #contact-anchor{
-  text-decoration: none;
   margin: 2rem;
+  text-decoration: none;
+  color: white;
 }
 
 #home-title{
   font-weight: 600;
-  font-size: 2.7rem;
+  font-size: 3rem;
   font-family: var(--font-inter);
 }
+
+#btn{
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 10rem;
+  padding: 7px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.btn-cv{
+  background-color: rgb(32, 32, 32);
+  border: 2px solid rgb(32, 32, 32);
+  border-radius: 5px;
+  width: 10rem;
+  padding: 7px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 5px;
+  color: white;
+}
+
+#btn:hover{
+  background-color: rgb(32, 32, 32);
+  color: white;
+  transition: ease .2s;
+}
+
+.btn-cv:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(32, 32, 32);
+  transition: ease .2s;
+}
+
+

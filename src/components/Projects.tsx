@@ -1,25 +1,35 @@
-import Image from "next/image"
+"use client";
+import { useRef } from 'react';
+import { useScroll, motion, useTransform } from "framer-motion";
+
 import { ProjectCard } from "./ProjectCard"
 import ExplorerImagePath from '../../public/countries.jpg'
-import { width } from "@fortawesome/free-solid-svg-icons/fa0"
+
 
 export default function Projects(){
+    const ref = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target:ref,
+        offset:[".5 1", "1.33 1"]
+    })
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7,1])
+    
     return(
         <>
-            <div className="pt-5 p-3 row w-100 mt-5 mb-5" id="#projects" style={{width:'100vh'}}>
+            <motion.div ref={ref} className="pt-5 p-5 row w-100 mt-5 mb-5" id="#projects" style={{width:'100vh', scale:scaleProgress}}>
                 
-                <div className="col-6 d-flex align-items-center justify-content-center flex-column">
-                    <h1 className="text-center font-roboto w-75">My Projects</h1>
-                    <p className="text-center font-roboto w-75">Welcome to my project showcase, where I highlight some of the exciting coding ventures I've undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I've crafted, showcasing my skills and passion for coding.</p>
+                <div className="col-6 border rounded bg-dark text-white d-flex align-items-center justify-content-center flex-column">
+                    <h1 className="text-center w-75">My Projects</h1>
+                    <p className="text-cent w-75">Welcome to my project showcase, where I highlight some of the exciting coding ventures I've undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I've crafted, showcasing my skills and passion for coding.</p>
 
                     <hr className="text-dark"/>
 
-                    <h1 className="font-roboto text-center mt-4">Contact</h1>
+                    <h1 className=" text-center mt-4">Contact</h1>
                     <div>
-                    <a id="contact-anchor" href="https://www.linkedin.com/in/obonachera/" className="text-dark" target="_blank">LINKEDIN </a> |
-                    <a id="contact-anchor" href="mailto:obonachera@gmail.com" className="text-dark" target="_blank"> EMAIL </a> |
-                    <a id="contact-anchor" href="https://github.com/opbonachera" className="text-dark" target="_blank"> GITHUB </a> | 
-                    <a id="contact-anchor" href="" className="text-dark" target="_blank"> CV </a>
+                    <a id="contact-anchor" href="https://www.linkedin.com/in/obonachera/"  target="_blank">LINKEDIN </a> |
+                    <a id="contact-anchor" href="mailto:obonachera@gmail.com" target="_blank"> EMAIL </a> |
+                    <a id="contact-anchor" href="https://github.com/opbonachera" target="_blank"> GITHUB </a> | 
+                    <a id="contact-anchor" href="" target="_blank"> CV </a>
                     </div>
                 </div>
                 <div className="col-6">
@@ -51,7 +61,7 @@ export default function Projects(){
                     </button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

@@ -13,10 +13,10 @@ export default function Navbar() {
                     
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <div className='w-100'>
-                            <div className="d-flex justify-content-evenly align-items-center font-roboto p-2">
+                            <div className="d-flex justify-content-evenly align-items-center  p-2">
                                 <div>
-                                    <a href="" className='m-5 fw-bolder link' id='navbar-item'>About Me</a>
-                                    <a href="" className='m-5 fw-bolder link' id='navbar-item'>Projects</a>
+                                    <Link to="#about" href="" className='m-5 fw-bolder link' id='navbar-item'>About Me</Link>
+                                    <Link to="#projects" className='m-5 fw-bolder link' id='navbar-item'>Projects</Link>
                                 </div>
                                 <div>
                                     <a className='fs-2 fs-bolder' id='navbar-item'>Ornella Bonachera</a>

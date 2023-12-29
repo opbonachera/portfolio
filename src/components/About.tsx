@@ -1,21 +1,30 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faC, faCode } from "@fortawesome/free-solid-svg-icons" 
+"use client";
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { useScroll,useTransform } from 'framer-motion';
 
 export default function About(){
+    const ref = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target:ref,
+        offset:["0 1", "1.33 1"]
+    })
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7,1])
+    
     return(
         <>
-            <div className="" id="#about">
-                <div className="row w-100 px-5 font-roboto" >
+            <motion.div className="" id="#about" style={{ opacity: scaleProgress}}>
+                <div className="row w-100 px-5" >
                     
-                    <div className="col-6 p-5">
+                    <div className="col-6 p-5 border rounded">
 
-                        <h5 className="display-5 p-2">Sobre mi</h5>
+                        <h5 className="display-5 p-2">About Me</h5>
                         <p className="">My journey into the world of programming began in my final years of high school when I discovered my passion for technology and the positive impact it can have on people's lives.</p>
                         <p>Since then, I have dedicated myself to learning about the subject through reading books, taking courses, and working on small projects.</p>
                         <p>Thanks to my perseverance and dedication, I started working as a junior web developer right after completing my high school studies, a position I have been in for approximately 10 months.</p>
                     </div>
                     
-                    <div className="col-6 p-5">
+                    <div className="col-6 p-5 bg-dark text-white  border rounded">
                         <h5 className="display-5">Experience</h5>
                         <p><span className="fw-bold">National University of Avellaneda • Junior Web Developer  </span>| March 2023 - Present</p>
                         <p>I actively contribute to the development, refactoring, and optimization of the university's systems in collaboration with a dedicated team of programmers. While specializing in frontend tasks, I also take on some backend responsibilities. Currently, I am involved in the refactoring of a content management system using React.js and Next.js for the frontend, Python for backend development, and PostgreSQL for the database.</p>
@@ -45,7 +54,9 @@ export default function About(){
                     </div>
                     
                 </div>
-            </div> 
+            </motion.div>
+   
+            
         </>
     )
 }
