@@ -103,4 +103,6 @@ body{
   transition: ease .2s;
 }
 
-
+#experience-div{
+  background-color: black;
+}

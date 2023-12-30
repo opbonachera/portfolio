@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useScroll,useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 export default function About(){
     const ref = useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ export default function About(){
                         <p>Thanks to my perseverance and dedication, I started working as a junior web developer right after completing my high school studies, a position I have been in for approximately 10 months.</p>
                     </div>
                     
-                    <div className="col-6 p-5 bg-dark text-white  border rounded">
+                    <div className="col-6 p-5 text-white  border rounded" id="experience-div">
                         <h5 className="display-5">Experience</h5>
                         <p><span className="fw-bold">National University of Avellaneda • Junior Web Developer  </span>| March 2023 - Present</p>
                         <p>I actively contribute to the development, refactoring, and optimization of the university's systems in collaboration with a dedicated team of programmers. While specializing in frontend tasks, I also take on some backend responsibilities. Currently, I am involved in the refactoring of a content management system using React.js and Next.js for the frontend, Python for backend development, and PostgreSQL for the database.</p>
@@ -36,13 +37,14 @@ export default function About(){
                         <h5 className="display-5">Stack</h5>
                         <div className="d-flex align-items-center justify-content-center p-5">
                             <div className="row">
-                                <div className="col"><img src="html.png" alt="" id="img" /></div>
-                                <div className="col"><img src="css-3.png" alt=""  id="img"/></div>
-                                <div className="col"><img src="typescript.png" alt="" id="img" /></div>
-                                <div className="col"><img src="js.png" alt="" id="img" /></div>
-                                <div className="col"><img src="react.png" alt="" id="img" /></div>
-                                <div className="col"><img src="git.png" alt="" id="img" /></div>
-                                <div className="col"><img src="docker.png" alt="" id="img" /></div>
+                                <div className="col"><Image width={100} height={100} src="/html.png" alt="" id="img" /></div>
+                                <div className="col"><Image width={100} height={100} src="/css-3.png" alt=""  id="img"/></div>
+                                <div className="col"><Image width={100} height={100} src="/typescript.png" alt="" id="img" /></div>
+                                {/* <div className="col"><img src="js.png" alt="" id="img" /></div> */}
+                                <div className="col"><Image width={100} height={100} src="/react.png" alt="" id="img" /></div>
+                                <div className="col"><Image width={100} height={100} src="/git.png" alt="" id="img" /></div>
+                                <div className="col"><Image width={100} height={100} src="/docker.png" alt="" id="img" /></div>
+                                <div className="col"><Image width={100} height={100} src="/angular.png" alt="" id="img" /></div>
                             </div>
                             
                             
