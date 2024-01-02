@@ -20,7 +20,7 @@ export default function About(){
                     <div className="col-6 p-5 border rounded">
 
                         <h5 className="display-5 p-2">About Me</h5>
-                        <p className="">My journey into the world of programming began in my final years of high school when I discovered my passion for technology and the positive impact it can have on people's lives.</p>
+                        <p className="">My journey into the world of programming began in my final years of high school when I discovered my passion for technology and the positive impact it can have on people&apos;s lives.</p>
                         <p>Since then, I have dedicated myself to learning about the subject through reading books, taking courses, and working on small projects.</p>
                         <p>Thanks to my perseverance and dedication, I started working as a junior web developer right after completing my high school studies, a position I have been in for approximately 10 months.</p>
                     </div>
@@ -28,7 +28,7 @@ export default function About(){
                     <div className="col-6 p-5 text-white  border rounded" id="experience-div">
                         <h5 className="display-5">Experience</h5>
                         <p><span className="fw-bold">National University of Avellaneda • Junior Web Developer  </span>| March 2023 - Present</p>
-                        <p>I actively contribute to the development, refactoring, and optimization of the university's systems in collaboration with a dedicated team of programmers. While specializing in frontend tasks, I also take on some backend responsibilities. Currently, I am involved in the refactoring of a content management system using React.js and Next.js for the frontend, Python for backend development, and PostgreSQL for the database.</p>
+                        <p>I actively contribute to the development, refactoring, and optimization of the universit&apos;s systems in collaboration with a dedicated team of programmers. While specializing in frontend tasks, I also take on some backend responsibilities. Currently, I am involved in the refactoring of a content management system using React.js and Next.js for the frontend, Python for backend development, and PostgreSQL for the database.</p>
                     
                         <p><span className="fw-bold">Freelance • Support Assistant and WordPress Developer  </span>March 2022 – December 2022</p>
                         <p>I successfully led training sessions for employees at a sports store, instructing them in the management and operation of their online store built with WordPress. Additionally, I actively participated in the development of the store, specializing in the implementation of various plugins and enhancing the overall design.</p>
