@@ -20,7 +20,7 @@ export default function Projects(){
                 
                 <div className="col-6 border rounded bg-dark text-white d-flex align-items-center justify-content-center flex-column">
                     <h1 className="text-center w-75">My Projects</h1>
-                    <p className="text-cent w-75">Welcome to my project showcase, where I highlight some of the exciting coding ventures I&apos;ve undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I've crafted, showcasing my skills and passion for coding.</p>
+                    <p className="text-cent w-75">Welcome to my project showcase, where I highlight some of the exciting coding ventures I&apos;ve undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I&apos;ve crafted, showcasing my skills and passion for coding.</p>
 
                     <hr className="text-dark"/>
 
