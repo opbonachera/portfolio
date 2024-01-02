@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
 
 import type { Metadata } from "next";
-import { appWithTranslation } from 'next-i18next';
 import { Alice, Bitter, Inter, Roboto } from 'next/font/google';
 import Script from "next/script";
 
