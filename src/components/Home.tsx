@@ -2,117 +2,36 @@
 
 import { useEffect } from "react";
 import styled from "styled-components";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation, motion, useScroll } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 
-const Title = styled.h2`
-  font-size: 3rem;
-  font-weight: 600;
-`;
-
-const Word = styled(motion.span)`
-  display: inline-block;
-  margin-right: 0.25em;
-  white-space: nowrap;
-`;
-
-const Character = styled(motion.span)`
-  display: inline-block;
-  margin-right: -0.05em;
-`;
-
 export default function AnimatedTitle() {
-  const text = 'JUNIOR WEB DEVELOPER AND INFORMATICS ENGINEERING STUDENT' // This would normally be passed into this component as a prop!
-  
-  const ctrls = useAnimation();
-  
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-  
-  useEffect(() => {
-    if (inView) {
-      ctrls.start("visible");
-    }
-    if (!inView) {
-      ctrls.start("hidden");
-    }
-  }, [ctrls, inView]);
-  
-  const wordAnimation = {
-    hidden: {},
-    visible: {},
-  };
-  
-  const characterAnimation = {
-    hidden: {
-      opacity: 0,
-      y: `0.25em`,
-    },
-    visible: {
-      opacity: 1,
-      y: `0em`,
-      transition: {
-        duration: 1,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  };
-  
+  const { scrollYProgress } = useScroll();
+
   return (
     <>
-      <motion.div style={{ height:"90vh" }} className="mb-0 " id='#home'>
-            <div className="row h-100 m-0">
-                <div className="col-12 text d-flex flex-column align-items-center justify-content-center">
-
-                        <Title aria-label={text} role="heading" className="w-50 text-center mb-4">
-                          {text.split(" ").map((word, index) => {
-                            return (
-                              <Word
-                                ref={ref}
-                                id="text"
-                                aria-hidden="true"
-                                key={index}
-                                initial="hidden"
-                                animate={ctrls}
-                                variants={wordAnimation}
-                                transition={{
-                                  delayChildren: index * 0.25,
-                                  staggerChildren: 0.05,
-                                }}
-                              >
-                                {word.split("").map((character, index) => {
-                                  return (
-                                    <Character
-                                      aria-hidden="true"
-                                      key={index}
-                                      id="letter"
-                                      variants={characterAnimation}
-                                    >
-                                      {character}
-                                    </Character>
-                                  );
-                                })}
-                              </Word>
-                            );
-                          })}
-                        </Title>
-                        
-                        <div className="">
-                          <button id="btn">
-                              <Link className="nav-link " to='#projects' spy={true} smooth={true} duration={300}>See Projects</Link>
-                          </button>
-                          <button className="btn-cv">
-                              <Link className="nav-link zoom w-100" to='#projects' spy={true} smooth={true} duration={300}>Download CV</Link>
-                          </button>
-                        </div>
-                        
-                        
-                </div>
-            </div> 
-      </motion.div>
+      <div className="row w- m-auto"  id="main" style={{height:'100vh'}}>
+        <motion.div className="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center p-5">
+            <h1 className="display-4 fw-bold">Hello! I&apos;m Ornella</h1>
+            <p className="w-75 fs-5 mt-5 text-center">I am a junior web developer with a year of hands-on experience, currently dedicated to advancing my skills while pursuing a degree in computer engineering. Proficient in frontend technologies like HTML, CSS, and JavaScript, I am passionate about creating engaging and user-friendly interfaces. For a comprehensive overview of my skills, experience, and projects, please feel free to explore my CV.</p>
+        </motion.div>
+        <div className="col-12 col-md-6 col-lg-6 d-flex flex-column align-items-center justify-content-center p-5">
+            <button id="btn" className="home-box-1">
+              <Link to="#about">About me</Link>
+            </button>
+            <button id="btn" className="home-box-2">
+              <Link to="#projects">Projects</Link>
+            </button>
+            <button id="btn" className="home-box-3">
+              <Link to="#projects">Contact</Link>
+            </button>
+            <button id="btn" className="home-box-4">
+              {/* <Link to="pdf/cvenglish.pdf" download>Download CV</Link> */}
+              <a href="pdf/cvenglish.pdf" className="text-decoration-none text-dark" target="_blank">Download CV</a>
+            </button>
+          </div>
+      </div>
     </> 
   );
 }

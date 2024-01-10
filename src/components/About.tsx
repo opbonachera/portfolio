@@ -1,64 +1,80 @@
 "use client";
-import { motion } from 'framer-motion';
-import { useRef } from 'react';
-import { useScroll,useTransform } from 'framer-motion';
-import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import { useEffect } from 'react';
 
 export default function About(){
-    const ref = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target:ref,
-        offset:["0 1", "1.33 1"]
-    })
-    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7,1])
+    const controls = useAnimation();
+    const [ref, inView] = useInView()
+    const squareVariants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: .5 } },
+        hidden: { opacity: 0, scale: 0 }
+      };
+      
+        useEffect(() => {
+            if (inView) {
+            controls.start("visible");
+            }
+        }, [controls, inView]);
     
     return(
         <>
-            <motion.div className="" id="#about" style={{ opacity: scaleProgress}}>
-                <div className="row w-100 px-5" >
-                    
-                    <div className="col-6 p-5 border rounded">
+            <motion.div className="" id="#about" ref={ref}
+                                                 animate={ controls }
+                                                 initial="hidden"
+                                                 variants={squareVariants} >
 
-                        <h5 className="display-5 p-2">About Me</h5>
-                        <p className="">My journey into the world of programming began in my final years of high school when I discovered my passion for technology and the positive impact it can have on people&apos;s lives.</p>
-                        <p>Since then, I have dedicated myself to learning about the subject through reading books, taking courses, and working on small projects.</p>
-                        <p>Thanks to my perseverance and dedication, I started working as a junior web developer right after completing my high school studies, a position I have been in for approximately 10 months.</p>
-                    </div>
-                    
-                    <div className="col-6 p-5 text-white  border rounded" id="experience-div">
-                        <h5 className="display-5">Experience</h5>
-                        <p><span className="fw-bold">National University of Avellaneda • Junior Web Developer  </span>| March 2023 - Present</p>
-                        <p>I actively contribute to the development, refactoring, and optimization of the universit&apos;s systems in collaboration with a dedicated team of programmers. While specializing in frontend tasks, I also take on some backend responsibilities. Currently, I am involved in the refactoring of a content management system using React.js and Next.js for the frontend, Python for backend development, and PostgreSQL for the database.</p>
-                    
-                        <p><span className="fw-bold">Freelance • Support Assistant and WordPress Developer  </span>March 2022 – December 2022</p>
-                        <p>I successfully led training sessions for employees at a sports store, instructing them in the management and operation of their online store built with WordPress. Additionally, I actively participated in the development of the store, specializing in the implementation of various plugins and enhancing the overall design.</p>
-                    </div>
-                    <div className="col-12 p-5">
-                        <h5 className="display-5">Stack</h5>
-                        <div className="d-flex align-items-center justify-content-center p-5">
-                            <div className="row">
-                                <div className="col"><Image width={100} height={100} src="/html.png" alt="" id="img" /></div>
-                                <div className="col"><Image width={100} height={100} src="/css-3.png" alt=""  id="img"/></div>
-                                <div className="col"><Image width={100} height={100} src="/typescript.png" alt="" id="img" /></div>
-                                {/* <div className="col"><img src="js.png" alt="" id="img" /></div> */}
-                                <div className="col"><Image width={100} height={100} src="/react.png" alt="" id="img" /></div>
-                                <div className="col"><Image width={100} height={100} src="/git.png" alt="" id="img" /></div>
-                                <div className="col"><Image width={100} height={100} src="/docker.png" alt="" id="img" /></div>
-                                <div className="col"><Image width={100} height={100} src="/angular.png" alt="" id="img" /></div>
-                            </div>
-                            
-                            
-                            
-                            
-                            
-                            
+
+                <div className="gradient-bg-2 row w-100 d-flex align-items-center justify-content-center " style={{ 'height': '100vh'}}>
+
+                    <div className="col-12 col-lg-6 col-md-6">
+                        <div className="w-75 p-5">
+                            <h5 className="display-4">About Me</h5>
+                            <p className="">My journey into the world of programming began in my final years of high school when I discovered my passion for technology and the positive impact it can have on people&apos;s lives.</p>
+                            <p>Since then, I have dedicated myself to learning about the subject through reading books, taking courses, and working on small projects.</p>
+                            <p>Thanks to my perseverance and dedication, I started working as a junior web developer right after completing my high school studies, a position I have been in for approximately 10 months. You can find out more about my experience on my CV.</p>
+                        
                         </div>
                     </div>
-                    
+                    <div className="col-12 col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                        <div className='p-5'>
+                                <h5 className='display-4'>Contact me</h5>
+                                <div className="row p-5">
+                                    <div className="col-12 p-2 align-items-center justify-content-start d-flex mt-3">
+                                        <img src="svg/github.svg" id="img" className="svg"/>
+                                        <h5> Github: /obonachera</h5>
+                                    </div>
+                                    <div className="col-12 p-2 align-items-center justify-content-start d-flex mt-3">
+                                        <img src="svg/linkedin.svg" id="img" />
+                                        <h5> Linkedin: /obonachera</h5>
+                                    </div>
+                                    <div className="col-12 p-2 align-items-center justify-content-start d-flex mt-3">
+                                        <img src="svg/email.svg" id="img" />
+                                        <h5>Email: obonachera@gmail.com</h5>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                    <div className='d-flex align-items-center w-100 flex-column justify-content-center'>
+                            <h5 className='display-4'>My stack</h5>
+                            <div className='d-flex row align-items-center justify-content-center w-100'>
+                                <img src="svg/html.svg" className="stack-svg" />
+                                <img src="svg/css.svg" className="stack-svg" />
+                                <img src="svg/js.svg" className="stack-svg" />
+                                <img src="svg/ts.svg" className="stack-svg" />
+                                <img src="svg/docker.svg" className="stack-svg" />
+                                <img src="svg/angular.svg" className="stack-svg" />
+                                <img src="svg/react.svg" className="stack-svg" />
+                                <img src="svg/bootstrap.svg" className="stack-svg" />
+                            </div>
+                        </div>
                 </div>
+                
             </motion.div>
    
             
         </>
     )
+
 }

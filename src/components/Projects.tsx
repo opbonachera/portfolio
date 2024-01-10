@@ -12,53 +12,33 @@ export default function Projects(){
         target:ref,
         offset:[".5 1", "1.33 1"]
     })
-    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.7,1])
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.8,1])
     
     return(
         <>
-            <motion.div ref={ref} className="pt-5 p-5 row w-100 mt-5 mb-5" id="#projects" style={{width:'100vh', scale:scaleProgress}}>
-                
-                <div className="col-6 border rounded bg-dark text-white d-flex align-items-center justify-content-center flex-column">
-                    <h1 className="text-center w-75">My Projects</h1>
-                    <p className="text-cent w-75">Welcome to my project showcase, where I highlight some of the exciting coding ventures I&apos;ve undertaken. Each project represents a unique blend of creativity, problem-solving, and technical prowess. Dive in to explore the diverse range of applications I&apos;ve crafted, showcasing my skills and passion for coding.</p>
-
-                    <hr className="text-dark"/>
-
-                    <h1 className="text-center mt-4">Contact</h1>
-                    <div>
-                    <a id="contact-anchor" href="https://www.linkedin.com/in/obonachera/"  target="_blank">LINKEDIN </a> |
-                    <a id="contact-anchor" href="mailto:obonachera@gmail.com" target="_blank"> EMAIL </a> |
-                    <a id="contact-anchor" href="https://github.com/opbonachera" target="_blank"> GITHUB </a> | 
-                    <a id="contact-anchor" href="" target="_blank"> CV </a>
+            <motion.div ref={ref} className="row w-100 gradient-bg border rounded" id="#projects" style={{width:'100vh', scale:scaleProgress}}>
+                <div className='p-5'>
+                    <div className='d-flex align-items-center justify-content-center flex-column'>
+                        <h1 className="text-center">My projects</h1>
+                        <p className='fs-3 text-center m-5 w-50'>Since I started coding I have eagerly immersed myself in a diverse array of projects spanning a wide spectrum of complexity. A glimpse into some of these projects is presented below.</p>
                     </div>
-                </div>
-                <div className="col-6">
-                    <div id="carouselExampleAutoplaying" className="carousel slide m-auto w-100" data-bs-ride="carousel" style={{width:"40%"}}>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active d-flex align-items-center justify-content-center" >
-                            <ProjectCard 
-                                title="World Explorer" 
-                                description="Buscador de información de países. Trabaja realizando peticiones HTTP a la API RESTCountries"
-                                imagePath={ExplorerImagePath}
-                                stack="STACK: Angular - Typescript - CSS - HTML - RXJS - Peticiones HTTP"
-                                projectLink="https://countries-app-livid-zeta.vercel.app/"  
-                                githubLink="https://github.com/opbonachera/countries-app" />
-                        </div>
-                        <div className="carousel-item">
-                            
-                        </div>
-                        <div className="carousel-item">
-                            
-                        </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span className="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
+                    <div className="row container-fluid m-auto p-5 w-100" >
+                        <ProjectCard 
+                                    title="World Explorer" 
+                                    description="World Explorer is a simple web application I created to investigate and get country information by searching for their country name, their capital or their region. It works with the RESTCountries API. "
+                                    imagePath={ExplorerImagePath}
+                                    stack={["Angular", "RXJS", "HTML", "Typescript", "CSS", "Bootstrap"]}
+                                    projectLink="https://countries-app-livid-zeta.vercel.app/"  
+                                    githubLink="https://github.com/opbonachera/countries-app" 
+                                    bgColor="home-box-1"/>
+                        <ProjectCard 
+                                    title="Psicoweb" 
+                                    description="The platform serves as a network for psychologists, offering patients the convenience of managing appointments. It primarily focuses on two key features: facilitating CRUD operations for appointments and providing seamless user registration and authentication processes."
+                                    imagePath={ExplorerImagePath}
+                                    stack={["Angular", "RXJS", "HTML", "CSS", "Bootstrap", "RXJS", "Node.js", "Nest.js", "MongoDB"]}
+                                    githubLink="https://github.com/opbonachera/countries-app"
+                                    bgColor="home-box-2" />
+                        
                     </div>
                 </div>
             </motion.div>
