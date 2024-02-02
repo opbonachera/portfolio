@@ -1,9 +1,10 @@
 
 export default function Footer(){
+    const date = new Date()
     return(
         <>
-            <div className="bg-dark text-center" id="footer">
-                <p>Copyright © 2024. All rights are reserved</p>
+            <div className="d-flex flex-column align-items-center justify-content-center home-box-2" style={{'height':'25vh'}}>
+                <p className="4">{ date.getFullYear() } All rights reserved. | Built on Next.js by Ornella Bonachera</p>
             </div>
         </>
 

@@ -16,13 +16,13 @@ export default function Projects(){
     
     return(
         <>
-            <motion.div ref={ref} className="row w-100 gradient-bg border rounded" id="#projects" style={{width:'100vh', scale:scaleProgress}}>
-                <div className='p-5'>
-                    <div className='d-flex align-items-center justify-content-center flex-column'>
+            <motion.div ref={ref} className="row w-100" id="#projects" style={{width:'100vh', scale:scaleProgress}}>
+                <div>
+                    <div className='col-12 d-flex align-items-center justify-content-center flex-column'>
                         <h1 className="text-center">My projects</h1>
-                        <p className='fs-3 text-center m-5 w-50'>Since I started coding I have eagerly immersed myself in a diverse array of projects spanning a wide spectrum of complexity. A glimpse into some of these projects is presented below.</p>
+                        <p className='fs-3 text-center m-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quidem distinctio voluptates magnam assumenda, quaerat debitis quisquam sint doloribus, ad magni quam nostrum sapiente adipisci. Consequatur qui voluptates asperiores maxime?</p>
                     </div>
-                    <div className="row container-fluid m-auto p-5 w-100" >
+                    <div className="col-12 container-fluid m-auto p-5 d-flex flex-column align-items-center p-5">
                         <ProjectCard 
                                     title="World Explorer" 
                                     description="World Explorer is a simple web application I created to investigate and get country information by searching for their country name, their capital or their region. It works with the RESTCountries API. "
