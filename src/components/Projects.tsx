@@ -19,10 +19,10 @@ export default function Projects(){
             <motion.div ref={ref} className="row w-100" id="#projects" style={{width:'100vh', scale:scaleProgress}}>
                 <div>
                     <div className='col-12 d-flex align-items-center justify-content-center flex-column'>
-                        <h1 className="text-center">My projects</h1>
-                        <p className='fs-3 text-center m-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quidem distinctio voluptates magnam assumenda, quaerat debitis quisquam sint doloribus, ad magni quam nostrum sapiente adipisci. Consequatur qui voluptates asperiores maxime?</p>
+                        <h5 className='text-center display-6 fw-bolder mt-5'>Projects</h5><p className='fs-3 text-center m-5'>Explore my project showcase where I demonstrate proficiency in diverse technologies and problem-solving skills, showcasing innovative solutions and clean code in real-world applications.</p>
                     </div>
-                    <div className="col-12 container-fluid m-auto p-5 d-flex flex-column align-items-center p-5">
+
+                    <div className="row d-flex align-items-center justify-content-center">
                         <ProjectCard 
                                     title="World Explorer" 
                                     description="World Explorer is a simple web application I created to investigate and get country information by searching for their country name, their capital or their region. It works with the RESTCountries API. "
@@ -40,6 +40,7 @@ export default function Projects(){
                                     bgColor="home-box-2" />
                         
                     </div>
+
                 </div>
             </motion.div>
         </>
