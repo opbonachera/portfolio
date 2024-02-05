@@ -29,6 +29,11 @@ body{
   border-bottom: 1px solid white;
 }
 
+.link-tag:hover{
+  position: relative;
+  bottom: 2px;
+}
+
 #stack-box{
   width: 7rem;
   background-color: black;
