@@ -2,16 +2,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
 
 import type { Metadata } from "next";
-import { Lora, Alice, Bitter, Inter, Roboto, Playfair_Display } from 'next/font/google';
+import { Lato, Bitter, Merriweather} from 'next/font/google';
 import Script from "next/script";
 
-const bitter = Bitter({ subsets: ["latin"], variable:'--font-bitter' });
-const inter = Inter({ subsets: ["latin"], variable:'--font-inter'});
-const alice = Alice({ subsets:["latin"], variable:'--font-alice', weight:'400'});
-const roboto = Roboto({ subsets:["latin"], variable:'--font-roboto', weight:'400'});
-const playfair = Playfair_Display({ subsets:["latin"], variable:'--font-playfair', weight:'400'});
-const lora = Lora({ subsets:["latin"], variable:'--font-lora', weight:'400'});
-
+const lato = Lato({ subsets: ["latin"], weight:'300', variable:'--font-lato' });
+const merriweather = Merriweather({ subsets: ["latin"], weight:'400', variable:'--font-merriweather'})
 
 export const metadata: Metadata = {
   title: "Ornella Bonachera | FrontEnd Developer",
@@ -26,7 +21,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning={true} lang="en">
 
-      <body className={`${bitter.variable} ${lora.variable} ${playfair.variable} ${inter.variable} ${alice.variable} ${roboto.variable}`}>{children}</body>
+      <body className={`${merriweather.variable} ${lato.variable}`}>{children}</body>
    
       <Script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
