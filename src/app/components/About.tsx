@@ -13,7 +13,7 @@ export const About = () => {
                 </div>
                 <div className="w-75">
                     <p className="merriweather">I leverage good communication and interpersonal skills to collaborate effectively within teams, demonstrating leadership qualities when necessary. My strong work ethic, adept time management, and dedication to teamwork ensure efficient project delivery and exceed expectations.</p>
-                    <hr />
+                    
                 </div>
             </div>
         </>

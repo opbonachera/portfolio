@@ -9,12 +9,13 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useMediaQuery } from 'react-responsive';
 
+import { Education } from './components/Education';
 import { About } from './components/About';
 import { Home } from './components/Home';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
-
+import { Stack } from './components/Stack';
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -50,78 +51,31 @@ function a11yProps(index: number) {
 export default function Main() {
   const [value, setValue] = React.useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => { setValue(newValue) };
-  const tabItems = ["HOME", "ABOUT ME", "EXPERIENCE", "EDUCATION", "PROJECTS", "CONTACT"];
-  const [isMobile, setIsMobile] = useState(false);
-  const mobile = useMediaQuery({ query: `(max-width: 760px)` });
-
-  const handleResize = () => {
-    if (window.innerWidth < 720) {
-        setIsMobile(true)
-    } else {
-        setIsMobile(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
-
-  // finally you can render components conditionally if isMobile is True or False 
-  // TODO: Build two different layouts. If its a phone, display one layout and if its a computer, display the other.
-  
-  const MobileLayout = () =>{
-    return (
-      <>
-          <article className='d-flex align-items-center justify-content-center col-12 lato'>
-          <Box style={{'width':'100%', height:''}}>
-            <Tabs sx={{ "& button": { color: '#7D7B79', 'font-weight':'bold', 'font-size':'1.5rem' },
-                        "& button.Mui-selected": {color: '#231F20', 'font-weight':'bold', 'font-size':'1.5rem'}}}
-                  value={value}
-                  className='h-100 w-100 d-flex align-items-center justify-content-center'
-                  onChange={handleChange}
-                  aria-label="scrollable auto tabs example"
-                  orientation="horizontal"
-                  variant="scrollable"
-                  scrollButtons="auto"
-                  TabIndicatorProps={{ sx:{ backgroundColor: '#231F20'} }}> 
-
-                  {tabItems.map((item, index)=>{ return <Tab label={item} {...a11yProps(index + 1)} /> })}
-            </Tabs>
-          </Box>
-          </article>
-      </>
-    )
-  }
-  
-  const DesktopNav = () =>{
-    return(
-      <> 
-          <article className='col-3 d-flex align-items-center justify-content-end'>
-           <Box>
-             <Tabs sx={{ "& button": { color: '#7D7B79', 'font-weight':'bold', 'font-size':'1.5rem' },
-                         "& button.Mui-selected": { color: '#231F20', 'font-weight':'bold', 'font-size':'1.5rem'}}}
-                   value={value}
-                   onChange={handleChange}
-                   aria-label="scrollable auto tabs example"
-                   orientation="vertical"
-                   variant="scrollable"
-                   scrollButtons="auto"
-                   TabIndicatorProps={{ sx:{ backgroundColor: '#231F20'} }}> 
-
-               {tabItems.map((item, index)=>{ return <Tab label={item} {...a11yProps(index + 1)} /> })}
-             </Tabs>
-           </Box>
-           </article>
-      </>
-    )
-  }
-  
+  const tabItems = ["HOME", "ABOUT ME", "EXPERIENCE", "EDUCATION", "PROJECTS", "CONTACT", "STACK"];
+ 
   return (
     <>
-      <main className="container-fluid" style={{ width:'100%', height: '100vh'}}>
+      <main className="container-fluid" style={{ width:'100%', height: '100vh'}} id='desktop-container'>
         <section className='row h-100'>
-            { mobile ? <MobileLayout /> : <DesktopNav />}
-          <article className='col-9 d-flex align-items-center m-auto justify-content-center h-100 article'>
+          {/* Start desktop layout */}
+            <article className='col-3' id='desktop-nav'>
+            <Box>
+              <Tabs sx={{ "& button": { color: '#7D7B79', 'font-weight':'bold', 'font-size':'1.5rem' },
+                          "& button.Mui-selected": { color: '#231F20', 'font-weight':'bold', 'font-size':'1.5rem'}}}
+                    value={value}
+                    onChange={handleChange}
+                    aria-label="scrollable auto tabs example"
+                    orientation="vertical"
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    TabIndicatorProps={{ sx:{ backgroundColor: '#231F20'} }}> 
+
+                {tabItems.map((item, index)=>{ return <Tab label={item} {...a11yProps(index + 1)} /> })}
+              </Tabs>
+            </Box>
+            </article>
+          {/* End desktop layout */}
+          <article className='col-9' id="tabs">
               <CustomTabPanel value={value} index={0}>
                 <Box className="h-100 m-auto">
                     <Home />
@@ -139,7 +93,7 @@ export default function Main() {
               </CustomTabPanel>
               <CustomTabPanel value={value} index={3}>
                 <Box className="h-100">
-                    <Experience />
+                    <Education />
                 </Box>
               </CustomTabPanel>
               <CustomTabPanel value={value} index={4}>
@@ -154,11 +108,51 @@ export default function Main() {
               </CustomTabPanel>
               <CustomTabPanel value={value} index={6}>
                 <Box className="h-100">
-                    <Experience />
+                  <Stack />
                 </Box>
               </CustomTabPanel>
-
+             
           </article>
+        </section>
+        </main>
+
+        <main id='mobile-container'>
+        {/* Mobile layout */}
+        <article className='container-fluid w-100' id='mobile-nav'>
+            <Box style={{'width':'100%', height:''}}>
+              <div className='w-100 d-flex justify-content-between flex-wrap fw-bold'>
+                { tabItems.map((item)=>{
+                  return ( <div className='mt-2 mb-2 underline'>{ item }</div> )
+                }) }
+              </div>
+            </Box>
+            </article>
+          {/* End mobile layout */}
+
+        <section id='mobile-body'>
+            <article>
+                <Box className="h-100 m-auto">
+                    <Home />
+                </Box>
+                <Box className="h-100">
+                    <About />
+                </Box>
+                <Box className="h-100">
+                    <Experience />
+                </Box>
+                <Box className="h-100">
+                    <Projects />
+                </Box>
+                <Box className="h-100">
+                    <Contact />
+                </Box>
+                <Box className="h-100">
+                    <Education />
+                </Box>
+                <Box className="h-100">
+                    <Stack />
+                </Box>
+            </article>
         </section>
       </main>
     </> 
