@@ -1,17 +1,26 @@
-import Image from "next/image"
 import Link from "next/link";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Email from "@mui/icons-material/Email";
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp'; 
+import { Typewriter } from 'react-simple-typewriter'
 
 export const Home = () =>{
     return(
         <>
             <div id='home' className="d-flex flex-column align-items-center justify-content-center" style={{minWidth: '350px', width: '100%'}}>
                 <div className="w-75">
-                    <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">Hello! I am Ornella.</h1>
+                    <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">
+                    <Typewriter
+                        words={['Hello! I am Ornella']}
+                        loop={5}
+                        cursor
+                        cursorStyle='|'
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000} />
+    
+                    </h1>
                     <hr />
                 </div>
                 <div className="w-75">

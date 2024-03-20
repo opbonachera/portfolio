@@ -3,11 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './globals.css';
 
 import * as React from 'react';
-import { useEffect, useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 import { Education } from './components/Education';
 import { About } from './components/About';
@@ -121,9 +120,13 @@ export default function Main() {
         <article className='container-fluid w-100' id='mobile-nav'>
             <Box style={{'width':'100%', height:''}}>
               <div className='w-100 d-flex justify-content-between flex-wrap fw-bold'>
-                { tabItems.map((item)=>{
-                  return ( <div className='mt-2 mb-2 underline'>{ item }</div> )
-                }) }
+                <Link href='#home' className='mt-2 mb-2 underline'>HOME</Link>
+                <Link href='#about' className='mt-2 mb-2 underline'>ABOUT ME</Link>
+                <Link href='#exp-container' className='mt-2 mb-2 underline'>EXPERIENCE</Link>
+                <Link href='#ed-container' className='mt-2 mb-2 underline'>EDUCATION</Link>
+                <Link href='#proj-container' className='mt-2 mb-2 underline'>PROJECTS</Link>
+                <Link href='#cont-container' className='mt-2 mb-2 underline'>CONTACT</Link>
+                <Link href='#stack-container' className='mt-2 mb-2 underline'>STACK</Link>
               </div>
             </Box>
             </article>
@@ -144,13 +147,13 @@ export default function Main() {
                     <Projects />
                 </Box>
                 <Box className="h-100">
-                    <Contact />
+                    <Stack />
                 </Box>
                 <Box className="h-100">
                     <Education />
                 </Box>
                 <Box className="h-100">
-                    <Stack />
+                    <Contact />
                 </Box>
             </article>
         </section>

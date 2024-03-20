@@ -6,18 +6,18 @@ export const Stack = () =>{
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">Stack</h1>
                     <hr />
                     
-                    <div className="row mb-4 fs-5">
+                    <div className="row mb-4">
                         <div className="col-12">
-                            <p><span className="merriweather">Programming Languages: </span> Typescript | Javascript | Python | CSS</p>
+                            <p><span className="merriweather fw-bold">Programming Languages: </span> Typescript | Javascript | Python | CSS</p>
                         </div>
                         <div className="col-12">
-                            <p><span className="merriweather">Frameworks: </span> React.js | Next.js | Angular | Flask</p>
+                            <p><span className="merriweather fw-bold">Frameworks: </span> React.js | Next.js | Angular | Flask</p>
                         </div>
                         <div className="col-12">
-                            <p><span className="merriweather">Technologies and tools: </span> HTML | Bootstrap | GIT | Docker | SCRUM | HTTP Protocol | Design Patterns</p>
+                            <p><span className="merriweather fw-bold">Technologies and tools: </span> HTML | Bootstrap | GIT | Docker | SCRUM | HTTP Protocol | Design Patterns</p>
                         </div>
                         <div className="col-12">
-                            <p><span className="merriweather">Languages: </span> Spanish | English </p>
+                            <p><span className="merriweather fw-bold">Languages: </span> Spanish | English </p>
                         </div>
                     </div>
 

@@ -2,7 +2,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 export const About = () => {
     return(
         <>
-            <div className="d-flex flex-column align-items-center justify-content-center" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
+            <div id="about" className="d-flex flex-column align-items-center justify-content-center" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">About me <AutoAwesomeIcon></AutoAwesomeIcon>
                     </h1>

@@ -182,7 +182,7 @@ body {
     height: 80vh;
   }
 
-  #exp-container, #ed-container, #proj-container, #cont-container{
+  #exp-container, #ed-container, #proj-container, #cont-container, #stack-container{
     margin-top: 4rem;
   }
 
