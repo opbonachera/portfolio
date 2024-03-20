@@ -17,7 +17,7 @@ const ProjectCard = ({ title, desc, stack, github, url }:{ title:string, desc:st
                         <div className='col-12'>
                         <div className="row">
                             {
-                                stack.map((e)=><div key={e} className="stack-tag col">{e}</div>)
+                                stack.map((e,index)=><div key={index} className="stack-tag col">{e}</div>)
                             }
                         </div>
                         </div>
@@ -53,13 +53,14 @@ export const Projects  = () => {
                 <div className='w-75 merriweather'  id='project-card'>
                     
                     {
-                        projectData.map((e)=>
+                        projectData.map((e,i)=>
                             <ProjectCard 
                                 title={e.title}
                                 stack={e.stack}
                                 desc={e.description}
                                 github={e.gitHub} 
-                                url={e.url} />)
+                                url={e.url} 
+                                key={i}/>)
                     }
 
                     

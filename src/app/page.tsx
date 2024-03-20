@@ -69,7 +69,7 @@ export default function Main() {
                     scrollButtons="auto"
                     TabIndicatorProps={{ sx:{ backgroundColor: '#231F20'} }}> 
 
-                {tabItems.map((item, index)=>{ return <Tab label={item} {...a11yProps(index + 1)} /> })}
+                {tabItems.map((item, index)=>{ return <Tab label={item} key={index} {...a11yProps(index + 1)} /> })}
               </Tabs>
             </Box>
             </article>
