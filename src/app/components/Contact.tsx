@@ -13,7 +13,7 @@ export const Contact = () =>{
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-2">Contact</h1>
                     <hr />
-                    <p className="merriweather">Let's connect! You can find me on:</p>
+                    <p className="merriweather">Let&apos;s connect! You can find me on:</p>
                 </div>
                 <div className="w-75">
                     <Link target="_blank" className="text-decoration-none" href="https://www.linkedin.com/in/obonachera/">

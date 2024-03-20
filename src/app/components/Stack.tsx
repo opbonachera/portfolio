@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export const Stack = () =>{
     return(
         <>
@@ -24,54 +26,54 @@ export const Stack = () =>{
                     <div className="d-flex flex-wrap">
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/html.png" className="stack-image" />
+                                <Image alt="" src="svg/html.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/css.png" className="stack-image" />
+                                <Image alt="" src="svg/css.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/js.png" className="stack-image" />
+                                <Image alt="" src="svg/js.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/ts.png" className="stack-image" />
+                                <Image alt="" src="svg/ts.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/bootstrap.png" className="stack-image" />
+                                <Image alt="" src="svg/bootstrap.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/python.png" className="stack-image" />
+                                <Image alt="" src="svg/python.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/flask.png" className="stack-image" />
+                                <Image alt="" src="svg/flask.png" className="stack-image" />
                             </div>
                         </div>
                         <div className="item onhover-down stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/git.png" className="stack-image" />
+                                <Image alt="" src="svg/git.png" className="stack-image" />
                             </div>
                         </div>
 
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/db.png" className="stack-image" />
+                                <Image alt="" src="svg/db.png" className="stack-image" />
                             </div>
                         </div>
 
                         <div className="item onhover-down mx-2 stack-item d-flex flex-column align-items-center justify-content-center">
                             <div className="">
-                                <img src="svg/docker.png" className="stack-image" />
+                                <Image alt="" src="svg/docker.png" className="stack-image" />
                             </div>
                         </div>
                     </div>

@@ -58,7 +58,7 @@ export const Education = () =>{
                    {
                     educationData.map((e)=>{
                         return (
-                            <div className="d-flex align-items-between justify-content-between">
+                            <div key={e.title} className="d-flex align-items-between justify-content-between">
                                 <div>
                                     <p className="merriweather"><span className="fw-bold merriweather">{ e.title }</span> <small> ({ e.company }) </small>| Date: { e.date }</p>
                                     

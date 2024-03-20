@@ -17,7 +17,7 @@ const ProjectCard = ({ title, desc, stack, github, url }:{ title:string, desc:st
                         <div className='col-12'>
                         <div className="row">
                             {
-                                stack.map((e)=><div className="stack-tag col">{e}</div>)
+                                stack.map((e)=><div key={e} className="stack-tag col">{e}</div>)
                             }
                         </div>
                         </div>
