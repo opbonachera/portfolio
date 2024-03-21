@@ -2,7 +2,7 @@
 export const Experience = () =>{
     return(
         <>
-            <div  id="exp-container" className="d-flex flex-column align-items-center justify-content-center" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
+            <div  id="exp-container" className="" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">Experience</h1>
                     <hr />
@@ -25,7 +25,7 @@ export const Experience = () =>{
                 </div>
 
 
-                <div className="w-75">
+                <div className="w-75 mt-3">
                     <p className="merriweather" style={{ fontWeight: 900 }}> Support Assistant and Wordpress Developer | <span className="fst-italic">CBDeportesOK</span> <span className="d-block small">July 2021 - December 2021</span></p>
                     <p className="merriweather">Successfully led training sessions for employees at a sports store, instructing them in the administration and operation of their online store built on WordPress. Additionally, I actively participated in the development of the store, specializing in implementing various plugins and enhancing overall design.</p>
                     <div className="row">

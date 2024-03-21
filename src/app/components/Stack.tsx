@@ -3,7 +3,7 @@ import Image from "next/image"
 export const Stack = () =>{
     return(
         <>
-            <div id="stack-container" className="d-flex flex-column align-items-center justify-content-center" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
+            <div id="stack-container" className="" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">Stack</h1>
                     <hr />

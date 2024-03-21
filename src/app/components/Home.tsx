@@ -8,7 +8,7 @@ import { Typewriter } from 'react-simple-typewriter'
 export const Home = () =>{
     return(
         <>
-            <div id='home' className="d-flex flex-column align-items-center justify-content-center" style={{minWidth: '350px', width: '100%'}}>
+            <div id='home' className="" style={{minWidth: '350px', width: '100%'}}>
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-3">
                     <Typewriter

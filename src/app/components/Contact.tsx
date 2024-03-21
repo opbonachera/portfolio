@@ -9,7 +9,7 @@ import Link from "next/link";
 export const Contact = () =>{
     return (
         <>
-            <div id="cont-container" className="d-flex flex-column align-items-center justify-content-center" style={{ height:'100%'}}>
+            <div id="cont-container" className="" style={{ height:'100%'}}>
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-2">Contact</h1>
                     <hr />

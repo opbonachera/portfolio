@@ -48,7 +48,7 @@ export const Education = () =>{
     return(
         <>
             
-            <div id="ed-container" className="mb-5 d-flex flex-column align-items-center justify-content-center" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
+            <div id="ed-container" className="" style={{ height:'100%',minWidth: '350px', width: '100%'}}>
                 <div className="w-75">
                     <h1 style={{ fontWeight: 900 }} className="display-2 mb-3"> Education
                     </h1>
